@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div id="setup-screen" class="screen">
+            <h1>Tic Tac Toe</h1>
+            <label for="grid-size">Select Grid Size (3x3 to 10x10):</label>
+            <input id="grid-size" type="number" min="3" max="10" value="3">
+            <label for="win-streak">Enter Win Streak (3 to 10):</label>
+            <input id="win-streak" type="number" min="3" max="10" value="3">
+            <label for="mode">Game Mode:</label>
+            <select id="mode">
+                <option value="user-vs-bot">User vs Bot</option>
+                <option value="two-players">Two Players</option>
+            </select>
+            <button id="start-game">Start Game</button>
+        </div>
+        <div id="game-screen" class="screen hidden">
+            <div id="header">
+                <h2 id="player-turn"></h2>
+                <div id="streak">Win Streak: 0</div>
+            </div>
+            <div id="game-board">   </div>
+            <button id="restart">Restart</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

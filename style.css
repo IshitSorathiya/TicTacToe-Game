@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+/* .screen {
+    display: none;
+} */
+
+.screen.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+#setup-screen input,
+#setup-screen select,
+button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* #game-board {
+    display: grid;
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #61dafb;
+    color: #282c34;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cell.taken {
+    cursor: not-allowed;
+} */
+
+button {
+    background-color: #61dafb;
+    color: #282c34;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #21a1f1;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Game board */
+#game-board {
+    display: grid;
+    gap: 0; /* No gaps so borders align perfectly */
+    margin: 20px 0;
+    background-color: #636e72; /* Subtle grey */
+    padding: 5px;
+    border: 2px solid #dfe6e9; /* Outer border */
+    border-radius: 8px;
+}
+
+/* Cells */
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    height: 60px; /* Uniform size for each cell */
+    border: 1px solid #dfe6e9; /* Add grid lines */
+    background-color: #ffffff; /* White background for cells */
+    cursor: pointer;
+    color: #2d3436; /* Text color */
+}
+
+.cell.taken {
+    cursor: not-allowed;
+    pointer-events: none; /* Disable clicks on taken cells */
+}
+
+/* Player Colors */
+.cell.player-x {
+    background-color: #fab1a0; /* Light red for Player X */
+}
+
+.cell.player-o {
+    background-color: #55efc4; /* Light green for Player O */
+}
